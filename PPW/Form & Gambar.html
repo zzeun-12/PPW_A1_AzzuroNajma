@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-witdh, initial-scale=1.0">
+    <title>Semantic HTML Layout</title>
+    <style>
+    .container{
+        text-align: center;
+    }
+    body {
+        border: solid black;
+        display: grid;
+            grid-template-columns: none;
+            grid-gap: 0;
+            grid-template-areas: 
+            "header"
+            "nav"
+            "main"
+            "aside"
+            "footer";
+    }
+    header{
+        background-color: #EEB37B;
+        grid-column: span 2;
+    }
+    nav {
+        background-color: #C9E6A4;
+        grid-column: span 2;
+    }
+    main{
+        text-align: center;
+        background-color: #C2C6FF;
+    }
+    section{
+        background-color: #FFE77F;
+    }
+    article{
+        background-color: #E3B07E;
+    }
+    aside{
+        background-color: #B1F4FF;
+    }
+    footer{
+        grid-area: footer;
+        text-align: center;
+        grid-column: span 2;
+        background-color: #EEB37B;
+    }
+    header, nav, main, section, aside, footer {
+       border: 1px solid black;
+    }
+    nav. main, aside, footer{
+        padding : 0;
+        margin : 0;
+    }
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h2>Membuat HTML Layout Yang sesuai Dengan Standar Semantic HTML</h2>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li> Beranda </li>
+                <li> Forum </li>
+                <li> Tentang Kami </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+       <h4> Semantic HTML </h4>
+            <section>
+            Selasa, 05 Maret 2024
+                <article>
+                    Tutorial membuat HTML dengan mudah dan cepat...
+                </article>
+                <article>
+                    Tutorial membuat link, iframe, dan lain...
+                </article>
+            </section>
+    </main>
+    <aside>
+        HTML Semantic adalah elemen - elemen HTML yang memiliki makna atau arti yang spesifik dan jelas
+    </aside>
+    <footer>
+        <h5>Jangan Lupa untuk klik like dan komen yaaa</h5>
+    </footer>
+</body>
+</html>
