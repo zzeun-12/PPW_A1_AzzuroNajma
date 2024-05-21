@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Output Methods</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .output {
+            margin-top: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>JavaScript Output Methods</h1>
+    
+    <button style="background-color: rgb(125, 46, 195); color: white;" onclick="ConsoleLog()">Contoh Console.log()</button>
+    <button style="background-color: rgb(178, 205, 130); color: aqua;" onclick="Alert()">Contoh Alert</button>
+    <button style="background-color: white; color: blue;" onclick="DocumentWrite()">Contoh Document.write</button>
+    <button style="background-color: rgb(196, 92, 40); color: rgb(22, 231, 81);" onclick="InnerHTML()">Contoh InnerHTML</button>
+    
+    <div class="output" id="outputDiv"></div>
+    
+
+    <script>
+
+        var inner = document.getElementById("Ini-Inner-HTML");
+        inner.innerHTML = "<p> Ini semua adalah contoh output</p>";
+
+        function ConsoleLog() {
+            console.log('Kepo yaah');
+        }
+        
+        function Alert() {
+            alert('Ding! Peringatan! Peringatan!');
+        }
+        
+        function DocumentWrite() {
+            document.write('Hai, pesan ini dari Document.write');
+        }
+        function InnerHTML() {
+            document.getElementById('outputDiv').innerHTML = 'Ini Hasil InnerHTML jika memakai button klik';
+        }
+        var inner = document.getElementById("Ini-Inner-HTML");
+        inner.innerHTML = "<p> Ini semua adalah contoh output</p>";
+
+    </script>
+    <div id="Ini-Inner-HTML"></div>
+</body>
+</html>
