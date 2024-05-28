@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Sederhana</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .calculator {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2 class="text-center">Kalkulator Sederhana</h2>
+        <div class="form-group">
+            <input type="number" id="num1" class="form-control" placeholder="Masukkan bilangan pertama">
+        </div>
+        <div class="form-group">
+            <input type="number" id="num2" class="form-control" placeholder="Masukkan bilangan kedua">
+        </div>
+        <div class="form-group">
+            <select id="operation" class="form-control">
+                <option value="+">Tambah</option>
+                <option value="-">Kurang</option>
+                <option value="*">Kali</option>
+                <option value="/">Bagi</option>
+            </select>
+        </div>
+        <button class="btn btn-primary btn-block" onclick="calculate()">Hitung</button>
+        <h3 class="text-center mt-3" id="result"></h3>
+    </div>
+
+    <script>
+        function calculate() {
+            let num1 = parseFloat(document.getElementById('num1').value);
+            let num2 = parseFloat(document.getElementById('num2').value);
+            let operation = document.getElementById('operation').value;
+            let result;
+
+            switch (operation) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    if (num2 !== 0) {
+                        result = num1 / num2;
+                    } else {
+                        result = 'Tidak dapat dibagi dengan nol';
+                    }
+                    break;
+                default:
+                    result = 'Operasi tidak dikenali';
+            }
+
+            document.getElementById('result').innerText = `Hasil: ${result}`;
+        }
+    </script>
+</body>
+</html>

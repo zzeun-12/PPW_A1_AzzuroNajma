@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikan PPW1</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <script>
+        let praktikan = confirm("Apakah Anda praktikan PPW1?");
+        
+        if (praktikan) {
+            let nama = prompt("Masukkan Nama:");
+            let nim = prompt("Masukkan NIM:");
+            let angkatan = prompt("Masukkan Angkatan:");
+
+            document.write(`
+                <div class="container mt-5">
+                    <h2>Data Praktikan PPW1</h2>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Nama</th>
+                                <th>NIM</th>
+                                <th>Angkatan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>${nama}</td>
+                                <td>${nim}</td>
+                                <td>${angkatan}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            `);
+        } else {
+            document.write("<h3>Anda bukan praktikan PPW1, anda tidak boleh masuk!</h3>");
+        }
+    </script>
+</body>
+</html>
